@@ -88,9 +88,13 @@ namespace AirlinesReservationSystem
             {
                 totalAmount = fare - (fare * 10 / 100);
             }
-            else
+            else if (discount == 15)
             {
                 totalAmount = fare - (fare * 15 / 100);
+            }
+            else
+            {
+                totalAmount = fare;
             }
 
             try
