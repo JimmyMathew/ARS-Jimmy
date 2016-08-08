@@ -11,7 +11,7 @@ namespace AirlinesReservationSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           lblName.Text = Session["userName"].ToString();
+           //lblName.Text = Session["userName"].ToString();
         }
 
         //protected void linkLogOut_Click(object sender, EventArgs e)
