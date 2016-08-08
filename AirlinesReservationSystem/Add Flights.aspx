@@ -43,9 +43,9 @@
             </td>
            <td>
                
-               <asp:TextBox ID="Txtdeptime" runat="server" Width="159px"></asp:TextBox>
-               
                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Txtdeptime" ErrorMessage="Required !!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+               
+               <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
                
             </td>
         </tr>
@@ -55,9 +55,9 @@
             </td>
            <td>
                 
-               <asp:TextBox ID="Txtarrtime" runat="server" Width="159px"></asp:TextBox>
-                
                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Txtarrtime" ErrorMessage="Required !!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                
+               <asp:Calendar ID="Calendar3" runat="server"></asp:Calendar>
                 
             </td>
         </tr>
@@ -114,14 +114,15 @@
          <tr>
            <td></td>
            <td>
-               <asp:Button ID="Btnsubmit" runat="server" Text="Submit" Width="78px" style="height: 26px" />
+               <asp:Button ID="Btnsubmit" runat="server" Text="Submit" Width="78px" style="height: 26px" OnClick="Btnsubmit_Click1" />
              </td>
         </tr>
       
          <tr>
            <td>&nbsp;</td>
            <td>
-               &nbsp;</td>
+               <asp:Label ID="LblResult" runat="server" BackColor="#333300" ForeColor="#FFCC00" Text="New Flight has been added!!" Visible="False"></asp:Label>
+             </td>
         </tr>
       
          </table>

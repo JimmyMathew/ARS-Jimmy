@@ -71,7 +71,8 @@
         </tr>
         <tr>
            <td class="auto-style1"></td>
-           <td class="auto-style2"></td>
+           <td class="auto-style2">
+               &nbsp;</td>
         </tr>
         
     </table>

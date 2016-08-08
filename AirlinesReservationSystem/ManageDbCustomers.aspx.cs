@@ -64,7 +64,7 @@ namespace AirlinesReservationSystem
             //Give your Destination table name
             sqlBulk.DestinationTableName = "frequentFliers";
             sqlBulk.WriteToServer(dt);
-            Response.Write("Inserted");
+            //Response.Write("Inserted");
 
             sqlCon.Close();
 

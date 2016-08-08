@@ -149,9 +149,11 @@ namespace AirlinesReservationSystem
                sqlCmd = new SqlCommand(qryString, sqlCon);
                da.SelectCommand = sqlCmd;
                sqlCmd.ExecuteNonQuery();
+               lblResponse.Visible = true;
 
               
-               Response.Write("Reservation Completed!!");
+               //Response.Write("Reservation Completed!!");
+              // Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Reservation Completed!!');</script>");
 
             }
 
@@ -162,5 +164,17 @@ namespace AirlinesReservationSystem
             }
 
             }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            txtCusName.Text = "";
+            txtEmailID.Text = "";
+            txtDepTime.Text = "";
+            txtFlghtOrigin.Text = "";
+            txtFlightDestination.Text = "";
+            txtSeats.Text = "";
+            txtTicketNo.Text = "";
+            
+        }
     }
 }

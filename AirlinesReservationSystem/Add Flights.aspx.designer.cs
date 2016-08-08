@@ -40,13 +40,13 @@ namespace AirlinesReservationSystem {
         protected global::System.Web.UI.WebControls.Label Lbldt;
         
         /// <summary>
-        /// Txtdeptime control.
+        /// Calendar2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtdeptime;
+        protected global::System.Web.UI.WebControls.Calendar Calendar2;
         
         /// <summary>
         /// Lblat control.
@@ -58,13 +58,13 @@ namespace AirlinesReservationSystem {
         protected global::System.Web.UI.WebControls.Label Lblat;
         
         /// <summary>
-        /// Txtarrtime control.
+        /// Calendar3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtarrtime;
+        protected global::System.Web.UI.WebControls.Calendar Calendar3;
         
         /// <summary>
         /// DropClass control.
@@ -164,5 +164,14 @@ namespace AirlinesReservationSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Btnsubmit;
+        
+        /// <summary>
+        /// LblResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblResult;
     }
 }

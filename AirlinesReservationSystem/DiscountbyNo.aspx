@@ -16,7 +16,7 @@
             <td class="auto-style1" >Select Email</td>
                <td class="auto-style1"> <asp:DropDownList ID="dropEmail" runat="server">
                 </asp:DropDownList>
-                &nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="dropEmail" ErrorMessage="Required!!" ForeColor="Red"></asp:RequiredFieldValidator>
+                &nbsp;&nbsp;<%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="dropEmail" ErrorMessage="Required!!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
             </td>
           
            
@@ -48,6 +48,14 @@
                 <asp:Button ID="btnDiscount" runat="server" Text="Add Discount" OnClick="btnDiscount_Click" />
             </td>
             
+        </tr>
+         <tr>
+            <td class="auto-style1" ></td>
+               <td class="auto-style1">
+                            <asp:Label ID="lblResponse" runat="server" BackColor="#333300" ForeColor="#FFCC00" Text="Discount has been Granted!!" Visible="False"></asp:Label>
+                            </td>
+          
+           
         </tr>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

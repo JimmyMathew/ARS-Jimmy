@@ -32,7 +32,8 @@ namespace AirlinesReservationSystem
                 sqlCon.Open();
                    sqlCmd = new SqlCommand("Delete from customers where ticketNo='" + cancel + "'", sqlCon);
                  sqlCmd.ExecuteNonQuery();
-                 Response.Write("Reservation Cancelled!!");
+                 lblResponse.Visible = true;
+                // Response.Write("Reservation Cancelled!!");
             }
                         catch (Exception ex)
             {
