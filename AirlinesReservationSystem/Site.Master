@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AirlinesReservationSystem.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body><%--background="Resources/grey_wash_wall_@2X.png"--%>
+    <form runat="server">
+    <div> <%--class="page"--%>
+        <div class="header">
+            <div class="title">
+                <h1>
+                  <img src="Images/Logo3.png" alt="Logo" width="50px" />&nbsp;&nbsp; AirLines Reservation System
+                </h1>
+
+            </div>
+           
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <%--<asp:LinkButton ID="linkLogOut" runat="server" Font-Bold="True" ForeColor="Black" OnClick="linkLogOut_Click" CausesValidation="False">[Log Out]</asp:LinkButton>--%>
+            <asp:HyperLink ID="linkLogOut" runat="server" Font-Bold="True" ForeColor="Black" NavigateUrl="~/logout.aspx">[Log Out]</asp:HyperLink>
+
+            <br />
+            <br />
+            <asp:Button ID="btnHome" runat="server" BackColor="Black" BorderColor="Black" BorderStyle="Outset" ForeColor="#FFCC33" OnClick="btnHome_Click" style="z-index: 1; left: 899px; top: 5px; position: absolute; height: 55px; width: 74px" Text="Home" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Welcome
+            <asp:Label ID="lblName" runat="server" Text="Label" Font-Bold="True" ForeColor="Black"></asp:Label>
+&nbsp;<div class="clear hideSkiplink">
+                <%if(Session["type"]=="Administrator"){ %>
+                <asp:Menu ID="NavigationMenu" runat="server" cssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/AddUser.aspx" Text="Add User" />
+                        <asp:MenuItem NavigateUrl="~/DeleteUser.aspx" Text="DeleteUser" />
+                        <asp:MenuItem NavigateUrl="ManageDbFlights.aspx" Text="Flights archive" />   
+        <asp:MenuItem NavigateUrl="ManageDbCustomers.aspx" Text="Customers Archive" />  
+                        <asp:MenuItem NavigateUrl="~/ChangePassword.aspx" Text="Change Password" />                      
+                    </Items>
+                </asp:Menu>
+                <%} %><%else if(Session["type"]=="Manager"){%>
+                <asp:Menu ID="Menu1" runat="server" cssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Add Flights.aspx" Text="Add Flights" />   
+                        <asp:MenuItem NavigateUrl="~/AffinityReport.aspx" Text="Affinity Report" /> 
+                        <asp:MenuItem NavigateUrl="#" Text="Revenue Report" /> 
+                        <asp:MenuItem NavigateUrl="~/DiscountbyNo.aspx" Text="Discount by Fly" /> 
+                        <asp:MenuItem NavigateUrl="~/DiscountbyAmount.aspx" Text="Discount by Amount" />  
+                          
+                         <asp:MenuItem NavigateUrl="~/ChangePassword.aspx" Text="Change Password" />                      
+                    </Items>
+                </asp:Menu>
+                <%} %><%else {%>
+                <asp:Menu ID="Menu2" runat="server" cssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/CreateReservation.aspx" Text="Create Reservation" />   
+                                           <asp:MenuItem NavigateUrl="~/ConfirmReservation.aspx" Text="Confirm Reservation" />  
+                        <asp:MenuItem NavigateUrl="~/DisplayTicket.aspx" Text="Display Ticket"/> 
+                        <asp:MenuItem NavigateUrl="~/Cancel Reservation.aspx" Text="Cancel Reservation" /> 
+                        <asp:MenuItem NavigateUrl="~/Flight Availability Status.aspx" Text="Flight Availabilty" />          
+                                             <asp:MenuItem NavigateUrl="Ticket Status.aspx" Text="Ticket Status" />   
+                    <asp:MenuItem NavigateUrl="~/ChangePassword.aspx" Text="Change Password" />  
+                    </Items>
+                </asp:Menu>
+                <%} %>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" >
+                <p>
+                    &nbsp;</p>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          
+            
+                © 2016 Flextronics International. All rights reserved.
+          
+            </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

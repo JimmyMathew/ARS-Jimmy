@@ -1,0 +1,49 @@
+id		int		Unchecked
+flightNo	varchar(50)	Checked
+class		varchar(50)	Checked
+doj		date		Checked
+ticketNo	int		Checked
+customerName	varchar(200)	Checked
+emailID		varchar(50)	Checked
+fare		float		Checked
+seats		varchar(50)	Checked
+dicount		float		Checked
+totalAmount	float		Checked
+confirmed	varchar(50)	Checked
+		
+
+
+
+id	int	Unchecked
+flightNo	varchar(50)	Checked
+departureTime	datetime	Checked
+arrivalTime	datetime	Checked
+class	varchar(50)	Checked
+fare	varchar(50)	Checked
+doj	date	Checked
+destination	varchar(50)	Checked
+origin	varchar(50)	Checked
+seats	int	Checked
+		Unchecked
+
+
+
+
+id		int		Unchecked
+userName	varchar(50)	Checked
+password	varchar(50)	Checked
+type		varchar(50)	Checked
+				
+
+
+id		int		Unchecked
+flightNo	varchar(50)	Checked
+departureTime	datetime	Checked
+arrivalTime	datetime	Checked
+class		varchar(50)	Checked
+fare		varchar(50)	Checked
+doj		date		Checked
+destination	varchar(50)	Checked
+origin		varchar(50)	Checked
+seats		int		Checked
+		
