@@ -24,7 +24,7 @@
                <asp:DropDownList ID="DropDownFlightNo" runat="server" AutoPostBack="True" Width="112px">
                </asp:DropDownList>
                
-               <asp:RequiredFieldValidator ID="RfvFNo" runat="server" ControlToValidate="txtFlightNo" ErrorMessage="Required !!" ForeColor="Red"></asp:RequiredFieldValidator>
+               <%--<asp:RequiredFieldValidator ID="RfvFNo" runat="server" ControlToValidate="txtFlightNo" ErrorMessage="Required !!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                
             </td>
         </tr>
@@ -40,7 +40,7 @@
                    <asp:ListItem></asp:ListItem>
                </asp:DropDownList>
                
-               <asp:CustomValidator ID="cusVclass" runat="server" ErrorMessage="Select Class" ForeColor="Red" OnServerValidate="CustomValidator1_ServerValidate"></asp:CustomValidator>
+               <%--<asp:CustomValidator ID="cusVclass" runat="server" ErrorMessage="Select Class" ForeColor="Red" OnServerValidate="CustomValidator1_ServerValidate"></asp:CustomValidator>--%>
                
             </td>
         </tr>
@@ -51,7 +51,7 @@
            <td class="auto-style2">
                 
                <asp:Calendar ID="CalendarDOJ" runat="server" Height="172px" Width="236px"></asp:Calendar>
-               <asp:RequiredFieldValidator ID="RfvJourney" runat="server" ControlToValidate="txtDoJ" ErrorMessage="Required !!" ForeColor="Red"></asp:RequiredFieldValidator>
+               <%--<asp:RequiredFieldValidator ID="RfvJourney" runat="server" ControlToValidate="txtDoJ" ErrorMessage="Required !!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                 
             </td>
         </tr>
@@ -61,7 +61,7 @@
             </td>
            <td class="auto-style2">
                <asp:TextBox ID="txtCusName" runat="server"></asp:TextBox>
-               <asp:RequiredFieldValidator ID="rfvCusName" runat="server" ControlToValidate="txtCusName" ErrorMessage="Required !!" ForeColor="Red"></asp:RequiredFieldValidator>
+               <%--<asp:RequiredFieldValidator ID="rfvCusName" runat="server" ControlToValidate="txtCusName" ErrorMessage="Required !!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
             </td>
         </tr>
         <tr>
