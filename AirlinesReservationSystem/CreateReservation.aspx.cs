@@ -74,7 +74,10 @@ namespace AirlinesReservationSystem
             da.SelectCommand = sqlCmd;
             da.Fill(ds, "discount");
             DataTable discountTable = ds.Tables["discount"];
-            discount = int.Parse(discountTable.Rows[0].ItemArray.GetValue(0).ToString());
+            if (int.Parse(discountTable.Rows[0].ItemArray.GetValue(0).ToString()) != null)
+                discount = int.Parse(discountTable.Rows[0].ItemArray.GetValue(0).ToString());
+            else
+                discount = 0;
             //Response.Write(discount);
 
             seatNew = int.Parse(txtSeats.Text);
