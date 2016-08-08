@@ -47,6 +47,16 @@
                 
             </td>
         </tr>
+         <tr>
+           <td class="auto-style1"></td>
+           <td class="auto-style2">
+                
+              
+               <asp:Label ID="lblResponse" runat="server" BackColor="#333300" ForeColor="#FF9933" Text="Reservation has been confirmed!!" Visible="False"></asp:Label>
+                
+              
+            </td>
+        </tr>
         
        
         

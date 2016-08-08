@@ -79,7 +79,9 @@ namespace AirlinesReservationSystem
             sqlCmd = new SqlCommand(qrystring, sqlCon);
             da.SelectCommand = sqlCmd;
             sqlCmd.ExecuteNonQuery();
-            Response.Write("Inserted");
+            lblResponse.Visible = true;
+
+           // Response.Write("Inserted");
         }
     }
 }

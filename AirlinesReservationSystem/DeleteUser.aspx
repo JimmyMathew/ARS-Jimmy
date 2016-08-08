@@ -27,7 +27,7 @@
        </tr>
         <tr>
            <td colspan="2"><center>
-               <asp:Label ID="lblMessage" runat="server" Text="User has been deleted successfully" Visible="False"></asp:Label>
+               <asp:Label ID="lblMessage" runat="server" Text="User has been deleted successfully" Visible="False" BackColor="#333300" ForeColor="#FF9933"></asp:Label>
            </td>
        </tr>
     </table>

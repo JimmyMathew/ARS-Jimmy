@@ -45,7 +45,16 @@
             </td>
         </tr>
        
-        
+        <tr>
+           <td class="auto-style1"></td>
+           <td>
+                
+              
+               <asp:Label ID="lblResponse" runat="server" BackColor="#333300" ForeColor="#FFCC00" Text="Password has been Changed!!" Visible="False"></asp:Label>
+                
+              
+            </td>
+        </tr>
     </table>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

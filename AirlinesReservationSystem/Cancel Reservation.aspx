@@ -58,6 +58,7 @@
                
                &nbsp;</td>
         </tr>
+      
         <tr>
            <td class="auto-style1"></td>
            <td class="auto-style7">
@@ -65,6 +66,13 @@
                <asp:Button ID="Btncr" runat="server" Text="Cancel Reservation" OnClick="Btncr_Click" />
                 
             </td>
+        </tr>
+          <tr>
+           <td class="auto-style2"></td>
+           <td class="auto-style3">
+               
+               <asp:Label ID="lblResponse" runat="server" BackColor="#333300" ForeColor="#FFCC00" Text="Reservation has been Cancelled!!" Visible="False"></asp:Label>
+              </td>
         </tr>
         
     </table>

@@ -39,9 +39,10 @@ namespace AirlinesReservationSystem
             sqlCmd = new SqlCommand(qryString, sqlCon);
             da.SelectCommand = sqlCmd;
             sqlCmd.ExecuteNonQuery();
+            lblResponse.Visible = true;
             txtNewPwd.Text = "";
             txtCPwd.Text = "";
-            Response.Write("Password Changed successfully");
+            //Response.Write("Password Changed successfully");
 
 
           

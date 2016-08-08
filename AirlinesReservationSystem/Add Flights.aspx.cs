@@ -40,6 +40,16 @@ namespace AirlinesReservationSystem
 
         protected void Btnsubmit_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+           sqlCon.Open();
+           sqlCmd = new SqlCommand("insert into flights values('" + Txtfnum.Text + "','" + Txtdeptime.Text + "','" + Txtarrtime.Text + "','" + DropClass.SelectedItem.Text + "','" + txtFare.Text + "','" + Calendar1.SelectedDate.ToString() + "','" + txtDest.Text + "','" + txtOrigin.Text + "','" +txtSeats.Text+ "')", sqlCon);
+           LblResult.Visible = true;
+
+          // Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('New flight has been Added!!');</script>");
+           //Response.Write("flights added");
+           sqlCmd.ExecuteNonQuery();
+           sqlCon.Close();
+=======
            //sqlCon.Open();
            //sqlCmd = new SqlCommand("insert into flights values('" + Txtfnum.Text + "','" + Calendar2.SelectedDate.ToString() + "','" + Calendar3.SelectedDate.ToString() + "','" + DropClass.SelectedItem.Text + "','" + txtFare.Text + "','" + Calendar1.SelectedDate.ToString() + "','" + txtDest.Text + "','" + txtOrigin.Text + "','" + txtSeats.Text + "')", sqlCon);
            //Response.Write("flights added");
@@ -55,6 +65,7 @@ namespace AirlinesReservationSystem
             Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('flight list has been added');</script>");
             sqlCmd.ExecuteNonQuery();
             sqlCon.Close();
+>>>>>>> origin/master
         }
     }
 }

@@ -69,13 +69,23 @@ namespace AirlinesReservationSystem
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             //Discount fetch block
-            qryString = "select discount from discount where emailID='" + txtEmailID.Text + "'";
+            qryString = "select * from discount where emailID='" + txtEmailID.Text + "'";
             sqlCmd = new SqlCommand(qryString, sqlCon);
             da.SelectCommand = sqlCmd;
             da.Fill(ds, "discount");
             DataTable discountTable = ds.Tables["discount"];
-            discount = int.Parse(discountTable.Rows[0].ItemArray.GetValue(0).ToString());
-            //Response.Write(discount);
+            if (discountTable != null)
+            {
+                if (int.Parse(discountTable.Rows[0].ItemArray.GetValue(0).ToString()) != 0)
+                {
+                    discount = int.Parse(discountTable.Rows[0].ItemArray.GetValue(0).ToString());
+                }
+            }
+            else
+            {
+                discount = 0;
+            }
+            Response.Write(discount);
 
             seatNew = int.Parse(txtSeats.Text);
             fare = fare * seatNew;
@@ -88,9 +98,13 @@ namespace AirlinesReservationSystem
             {
                 totalAmount = fare - (fare * 10 / 100);
             }
-            else
+            else if (discount == 15)
             {
-                totalAmount = fare - (fare * 15 / 100);
+                totalAmount = fare - (fare * 10 / 100);
+            }
+            else 
+            {
+                totalAmount = fare;
             }
 
             try
@@ -135,9 +149,11 @@ namespace AirlinesReservationSystem
                sqlCmd = new SqlCommand(qryString, sqlCon);
                da.SelectCommand = sqlCmd;
                sqlCmd.ExecuteNonQuery();
+               lblResponse.Visible = true;
 
               
-               Response.Write("Reservation Completed!!");
+               //Response.Write("Reservation Completed!!");
+              // Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Reservation Completed!!');</script>");
 
             }
 
@@ -148,5 +164,17 @@ namespace AirlinesReservationSystem
             }
 
             }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            txtCusName.Text = "";
+            txtEmailID.Text = "";
+            txtDepTime.Text = "";
+            txtFlghtOrigin.Text = "";
+            txtFlightDestination.Text = "";
+            txtSeats.Text = "";
+            txtTicketNo.Text = "";
+            
+        }
     }
 }

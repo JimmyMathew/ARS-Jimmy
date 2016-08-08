@@ -67,9 +67,9 @@ namespace AirlinesReservationSystem
             dt.Rows.Add(dr);
             SqlCommandBuilder cb = new SqlCommandBuilder(da);
             da.Update(ds, "cust");
+            lblResponse.Visible = true;
 
-
-            Response.Write("Reservation Confirmed Successfully!!!");
+         //   Response.Write("Reservation Confirmed Successfully!!!");
             //Response.Redirect("DisplayTicket.aspx");
 
 

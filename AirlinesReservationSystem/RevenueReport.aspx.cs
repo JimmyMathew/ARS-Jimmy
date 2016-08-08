@@ -44,6 +44,8 @@ namespace AirlinesReservationSystem
                {
                    while (dr.Read())
                        lblRevenue.Text = dr[0].ToString();
+                   lblRevenue.Visible = true;
+
                    dr.Close();
                    sqlCon.Close();
 
