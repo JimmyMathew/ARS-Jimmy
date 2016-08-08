@@ -74,10 +74,7 @@ namespace AirlinesReservationSystem
             da.SelectCommand = sqlCmd;
             da.Fill(ds, "discount");
             DataTable discountTable = ds.Tables["discount"];
-            if (int.Parse(discountTable.Rows[0].ItemArray.GetValue(0).ToString()) != null)
-                discount = int.Parse(discountTable.Rows[0].ItemArray.GetValue(0).ToString());
-            else
-                discount = 0;
+            discount = int.Parse(discountTable.Rows[0].ItemArray.GetValue(0).ToString());
             //Response.Write(discount);
 
             seatNew = int.Parse(txtSeats.Text);
@@ -91,13 +88,9 @@ namespace AirlinesReservationSystem
             {
                 totalAmount = fare - (fare * 10 / 100);
             }
-            else if (discount == 15)
-            {
-                totalAmount = fare - (fare * 15 / 100);
-            }
             else
             {
-                totalAmount = fare;
+                totalAmount = fare - (fare * 15 / 100);
             }
 
             try

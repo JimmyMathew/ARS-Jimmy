@@ -114,7 +114,7 @@
          <tr>
            <td></td>
            <td>
-               <asp:Button ID="Btnsubmit" runat="server" Text="Submit" Width="78px" style="height: 26px" OnClick="Btnsubmit_Click1" />
+               <asp:Button ID="Btnsubmit" runat="server" Text="Submit" Width="78px" style="height: 26px" />
              </td>
         </tr>
       

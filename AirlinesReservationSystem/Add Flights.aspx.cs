@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 
 namespace AirlinesReservationSystem
-{
+{  
     public partial class Add_Flights : System.Web.UI.Page
     {
         string conString;
@@ -21,8 +21,8 @@ namespace AirlinesReservationSystem
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            DropClass.Items.Add("Executive");
-            DropClass.Items.Add("Buisness");
+            //DropClass.Items.Add("Executive");
+            //DropClass.Items.Add("Buisness");
 
             conString = ConfigurationManager.ConnectionStrings["Airlines"].ConnectionString;
             sqlCon = new SqlConnection(conString);
@@ -30,7 +30,7 @@ namespace AirlinesReservationSystem
             //ds = new DataSet();
         }
 
-
+        
 
         protected void DropClass_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -40,22 +40,11 @@ namespace AirlinesReservationSystem
 
         protected void Btnsubmit_Click(object sender, EventArgs e)
         {
-            //sqlCon.Open();
-            //sqlCmd = new SqlCommand("insert into flights values('" + Txtfnum.Text + "','" + Txtdeptime.Text + "','" + Txtarrtime.Text + "','" + DropClass.SelectedItem.Text + "','" + txtFare.Text + "','" + Calendar1.SelectedDate.ToString() + "','" + txtDest.Text + "','" + txtOrigin.Text + "','" + txtSeats.Text + "')", sqlCon);
-            ////Response.Write("flights added");
-            //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('flights list is added');</script>");
-            //sqlCmd.ExecuteNonQuery();
-            //sqlCon.Close();
-        }
-
-        protected void Btnsubmit_Click1(object sender, EventArgs e)
-        {
-            sqlCon.Open();
-            sqlCmd = new SqlCommand("insert into flights values('" + Txtfnum.Text + "','" + Txtdeptime.Text + "','" + Txtarrtime.Text + "','" + DropClass.SelectedItem.Text + "','" + txtFare.Text + "','" + Calendar1.SelectedDate.ToString() + "','" + txtDest.Text + "','" + txtOrigin.Text + "','" + txtSeats.Text + "')", sqlCon);
-            //Response.Write("flights added");
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('flights list is added');</script>");
-            sqlCmd.ExecuteNonQuery();
-            sqlCon.Close();
+           sqlCon.Open();
+           sqlCmd = new SqlCommand("insert into flights values('" + Txtfnum.Text + "','" + Txtdeptime.Text + "','" + Txtarrtime.Text + "','" + DropClass.SelectedItem.Text + "','" + txtFare.Text + "','" + Calendar1.SelectedDate.ToString() + "','" + txtDest.Text + "','" + txtOrigin.Text + "','" +txtSeats.Text+ "')", sqlCon);
+           Response.Write("flights added");
+           sqlCmd.ExecuteNonQuery();
+           sqlCon.Close();
         }
     }
 }
