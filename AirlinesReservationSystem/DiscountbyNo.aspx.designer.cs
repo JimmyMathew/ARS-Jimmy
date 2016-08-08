@@ -22,15 +22,6 @@ namespace AirlinesReservationSystem {
         protected global::System.Web.UI.WebControls.DropDownList dropEmail;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
         /// lblflown control.
         /// </summary>
         /// <remarks>
@@ -74,5 +65,14 @@ namespace AirlinesReservationSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDiscount;
+        
+        /// <summary>
+        /// lblResponse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResponse;
     }
 }

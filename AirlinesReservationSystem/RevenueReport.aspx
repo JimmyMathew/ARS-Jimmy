@@ -13,7 +13,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Button ID="btnFind" runat="server" OnClick="btnFind_Click" Text="FInd" Width="63px" />
 &nbsp;&nbsp;&nbsp; Total Revenue:
-    <asp:Label ID="lblRevenue" runat="server" BackColor="#FF3300" BorderColor="Black" Text="Label"></asp:Label>
+    <asp:Label ID="lblRevenue" runat="server" BackColor="#333300" BorderColor="Black" Text="Label" ForeColor="#FF9933" Visible="False"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 <p>

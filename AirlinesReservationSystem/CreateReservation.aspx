@@ -122,9 +122,19 @@
            <td class="auto-style2">
                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-               <asp:Button ID="btnReset" runat="server" Text="Reset" />
+               <asp:Button ID="btnReset" runat="server" Text="Reset" OnClick="btnReset_Click" />
             </td>
         </tr>
+           <tr>
+           <td class="auto-style1"></td>
+           <td class="auto-style2">
+               
+               <asp:Label ID="lblResponse" runat="server" BackColor="#333300" ForeColor="#FFCC00" Text="Reservation has been completed successfully!!" Visible="False"></asp:Label>
+               
+            </td>
+        </tr>
+        
+    
     </table>
 
 </asp:Content>

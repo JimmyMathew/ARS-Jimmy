@@ -121,7 +121,8 @@
          <tr>
            <td>&nbsp;</td>
            <td>
-               &nbsp;</td>
+               <asp:Label ID="LblResult" runat="server" BackColor="#333300" ForeColor="#FFCC00" Text="New Flight has been added!!" Visible="False"></asp:Label>
+             </td>
         </tr>
       
          </table>

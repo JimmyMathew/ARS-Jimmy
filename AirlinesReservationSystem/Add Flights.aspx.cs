@@ -42,7 +42,10 @@ namespace AirlinesReservationSystem
         {
            sqlCon.Open();
            sqlCmd = new SqlCommand("insert into flights values('" + Txtfnum.Text + "','" + Txtdeptime.Text + "','" + Txtarrtime.Text + "','" + DropClass.SelectedItem.Text + "','" + txtFare.Text + "','" + Calendar1.SelectedDate.ToString() + "','" + txtDest.Text + "','" + txtOrigin.Text + "','" +txtSeats.Text+ "')", sqlCon);
-           Response.Write("flights added");
+           LblResult.Visible = true;
+
+          // Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('New flight has been Added!!');</script>");
+           //Response.Write("flights added");
            sqlCmd.ExecuteNonQuery();
            sqlCon.Close();
         }
