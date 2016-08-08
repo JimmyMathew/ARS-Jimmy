@@ -31,15 +31,6 @@ namespace AirlinesReservationSystem {
         protected global::System.Web.UI.WebControls.DropDownList DropDownFlightNo;
         
         /// <summary>
-        /// RfvFNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RfvFNo;
-        
-        /// <summary>
         /// lblClass control.
         /// </summary>
         /// <remarks>
@@ -56,15 +47,6 @@ namespace AirlinesReservationSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DrpDownClass;
-        
-        /// <summary>
-        /// cusVclass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator cusVclass;
         
         /// <summary>
         /// lblDoJourney control.
@@ -85,15 +67,6 @@ namespace AirlinesReservationSystem {
         protected global::System.Web.UI.WebControls.Calendar CalendarDOJ;
         
         /// <summary>
-        /// RfvJourney control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RfvJourney;
-        
-        /// <summary>
         /// lblCustName control.
         /// </summary>
         /// <remarks>
@@ -110,15 +83,6 @@ namespace AirlinesReservationSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCusName;
-        
-        /// <summary>
-        /// rfvCusName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCusName;
         
         /// <summary>
         /// Label1 control.
